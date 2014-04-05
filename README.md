@@ -1,4 +1,4 @@
-TestRubikFX
+LiteRubikFX
 ===========
 
 A JavaFX based application for playing with a 3D model of the Rubik's Cube by rotating 
