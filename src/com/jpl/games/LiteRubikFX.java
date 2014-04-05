@@ -15,7 +15,7 @@ import javafx.stage.Stage;
  *
  * @author jpereda, April 2014 - @JPeredaDnr
  */
-public class TestRubikFX extends Application {
+public class LiteRubikFX extends Application {
     
     private final BorderPane pane=new BorderPane();
     private Rubik rubik;
