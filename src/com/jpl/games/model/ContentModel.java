@@ -225,6 +225,8 @@ public class ContentModel {
         cameraPosition.setZ(-2d*dimModel);
         cameraXform2.t.setX(0.0);
         cameraXform2.t.setY(0.0);
+        cameraXform.setRx(-30.0);
+        cameraXform.setRy(30);
     }
 
 }
