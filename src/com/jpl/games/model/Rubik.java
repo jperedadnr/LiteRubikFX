@@ -38,7 +38,7 @@ public class Rubik {
     
     private final Rotations rot;
     
-    private final List<Integer> order;
+    private List<Integer> order;
     private List<Integer> reorder, layer;
     private final DoubleProperty rotation=new SimpleDoubleProperty(0d);
     private final BooleanProperty onRotation=new SimpleBooleanProperty(false);
@@ -89,6 +89,9 @@ public class Rubik {
                         Affine a=new Affine(v.getTransforms().get(0));
                         a.prepend(new Rotate(angNew.doubleValue()-angOld.doubleValue(),axis));
                         v.getTransforms().setAll(a);
+                        if(k.equals("Block46")){
+                            System.out.println("ang: "+(angNew.doubleValue()-angOld.doubleValue()));
+                        }
                     });
             });
         };
@@ -102,7 +105,7 @@ public class Rubik {
         onRotation.set(true);
         
         boolean bFace= !(btRot.startsWith("X")||btRot.startsWith("Y")||btRot.startsWith("Z"));
-        
+
         // rotate cube indexes
         rot.turn(btRot);
         // get new indexes in terms of blocks numbers from original order
@@ -136,8 +139,7 @@ public class Rubik {
                 },  new KeyValue(rotation,angEnd)));
         timeline.playFromStart();
 
-        AtomicInteger index = new AtomicInteger();
-        reorder.stream().forEach(r->order.set(index.getAndIncrement(),r));
+        order=reorder.stream().collect(Collectors.toList());
     }
 
     public SubScene getSubScene(){ return content.getSubScene(); }
