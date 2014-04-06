@@ -139,6 +139,7 @@ public class Rubik {
                 },  new KeyValue(rotation,angEnd)));
         timeline.playFromStart();
 
+        // update order with last list, to start all over again in the next rotation
         order=reorder.stream().collect(Collectors.toList());
     }
 
