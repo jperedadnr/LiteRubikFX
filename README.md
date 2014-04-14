@@ -4,7 +4,7 @@ LiteRubikFX
 A JavaFX based application for playing with a 3D model of the Rubik's Cube by rotating 
 layers or the whole cube
 
-Explained here: http://jperedadnr.blogspot.com/
+Explained here: http://jperedadnr.blogspot.com.es/2014/04/rubikfx-solving-rubiks-cube-with-javafx.html
 
 Requires Java 8: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
